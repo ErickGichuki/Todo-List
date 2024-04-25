@@ -3,6 +3,7 @@ import React from 'react'
 export default function Todo({todo,toggleList}) {
     function handleChecked(){
         toggleList(todo.id)
+        console.log(todo.complete)
     }
   return (
     <div>

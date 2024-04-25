@@ -3,12 +3,11 @@ import './App.css';
 import Todos from './components/Todos';
 import Button from './components/Button';
 import {useEffect, useRef, useState} from 'react';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4} from 'uuid';
 
-const LOCAL_STORAGE_KEY = 'todos'
+const LOCAL_STORAGE_KEY = 'todosItem'
 
 function App() {
-
   const [todos, setTodos] = useState([{id :1, name:"walking", complete:true}])
   const ActivityRef = useRef()
 
@@ -43,7 +42,7 @@ function App() {
      ActivityRef.current.value= null
     console.log(todos)
    }
-  //console.log(name)
+  //console.log(ActivityRef.current.value)
   return (
     <>
     <div className="items" id='list-items'>
